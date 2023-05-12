@@ -5,6 +5,7 @@ services:
         network_mode: host
         devices:
           - /dev/snd
+        volumes:
           - ./config/shairport-sync.conf:/etc/shairport-sync.conf
         image: mikebrady/shairport-sync
 

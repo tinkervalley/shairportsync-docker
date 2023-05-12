@@ -4,12 +4,12 @@ services:
         restart: always
         network_mode: host
         devices:
-            - /dev/snd
-		      	- ./config/shairport-sync.conf:/etc/shairport-sync.conf
+          - /dev/snd
+          - ./config/shairport-sync.conf:/etc/shairport-sync.conf
         image: mikebrady/shairport-sync
-		
-	shairport-scan:
-	    restart: no
-		devices:
-		    - /dev/snd
-	    image: mikebrady/sps-alsa-explore
+
+    shairport-scan:
+        restart: no
+        devices:
+          - /dev/snd
+        image: mikebrady/sps-alsa-explore
